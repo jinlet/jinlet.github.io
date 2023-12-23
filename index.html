@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnfinns gave</title>
+    <link rel="stylesheet" href="present.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Add snowflake styles here */
+        .snowflake {
+            position: fixed;
+            background: #fff;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: falling linear infinite;
+        }
+
+        @keyframes falling {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <audio id="christmasMusic" loop>
+        <source src="christmas_music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <div class="snowflake"></div>
+    <div class="greeting">
+        <span>God jul Arnfinn!</span>
+    </div>
+    <div class="giftcontainer">
+        <div class="gift">
+            <input type="checkbox" id="click">
+            <label for="click" class="click"></label>
+            <div class="wishes">
+                <img src="gin.png" width=75px alt="gin">
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-controls">
+        <button onclick="toggleAudio()">Trykk her</button>
+    </div>
+
+    <script src="snowfall.js"></script>
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("christmasMusic");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+    <script src="snowfall.js"></script>
+</body>
+</html>
