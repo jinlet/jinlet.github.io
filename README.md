@@ -7,4 +7,4 @@ This repository contains the source code and documentation for an amazing projec
 Press the gift to open it
 
 
-![My Project](social.JPG)
+![My Project](social.jpg)
